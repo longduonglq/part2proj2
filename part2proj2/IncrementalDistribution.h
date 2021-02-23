@@ -13,7 +13,7 @@ public:
 	void add(double newElement);
 
 	// Person: Gia
-	// Outputs the internal array for problem 13. So the first array element representing the range (0.0 ... 0.1) and so on ..
+	// Outputs the internal array for problem 13. So the first array element representing the range (0.0 ... 0.1) and so on ..  
 	long* getDistribution();
 
 private:
