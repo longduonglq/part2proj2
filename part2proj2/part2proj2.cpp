@@ -9,6 +9,7 @@ int main()
     std::cout << "Hello World!\n";
 
     cout << "Minh is here";
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
