@@ -11,6 +11,7 @@ int main()
 
     cout << "Minh is here";
     
+    // Minh Test
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
