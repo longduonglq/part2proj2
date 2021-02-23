@@ -139,7 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="IncrementalDistribution.cpp" />
     <ClCompile Include="part2proj2.cpp" />
+    <ClCompile Include="RandomGenerator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IncrementalDistribution.h" />
+    <ClInclude Include="RandomGenerator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
