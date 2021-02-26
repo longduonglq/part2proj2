@@ -8,7 +8,7 @@ class RandomGenerator
 public:
 	// Person: Christopher
 	// init class
-	RandomGenerator(long seed, long multiplier, long increment, long modulus);
+	RandomGenerator(long _seed, long _multiplier, long _increment, long _modulus);
 	
 	// Person: Chrisopher
 	// assign new seed

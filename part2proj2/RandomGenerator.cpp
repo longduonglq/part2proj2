@@ -4,9 +4,12 @@
 #include <time.h> 
 #include "RandomGenerator.h"
 
-RandomGenerator::RandomGenerator(long seed, long multiplier, long increment, long modulus)
+RandomGenerator::RandomGenerator(long _seed, long _multiplier, long _increment, long _modulus)
 {
-	//buffer
+	seed = _seed;
+	multiplier = _multiplier;
+	increment = _increment;
+	modulus = _modulus;
 }
 
 void RandomGenerator::setSeed(long newSeed)
