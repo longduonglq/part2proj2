@@ -26,7 +26,7 @@ public:
 	// Get random number so that the distribution is Gaussian (refer to problem 14)
 	// So I think the approach is to call getRandomInUnitInterval 12 times to generate 1 
 	// random in Gaussian Distribution.
-	double getRandomInGaussianDistribution();
+	void getRandomInGaussianDistribution();
 
 private:
 	long seed, multiplier, increment, modulus;
