@@ -22,9 +22,9 @@ RandomGenerator::RandomGenerator(long _seed, long _multiplier, long _increment, 
 	modulus = _modulus;
 }
 
-void RandomGenerator::setSeed(long newSeed)
+void RandomGenerator::setSeed()
 {
-	seed = newSeed;
+	seed = getRandomInt();
 }
 
 long RandomGenerator::getRandomInt()

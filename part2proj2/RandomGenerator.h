@@ -12,7 +12,7 @@ public:
 	
 	// Person: Chrisopher
 	// assign new seed
-	void setSeed(long newSeed);
+	void setSeed();
 
 	// Person: Christopher
 	// Get a new random Int from 0 to modulus (refer to problem 11 in textbook)
