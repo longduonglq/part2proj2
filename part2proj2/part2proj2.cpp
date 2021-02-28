@@ -1,4 +1,4 @@
-// Participant: Long Duong
+// Participants: Long Duong, Christopher
 // Date: 02-27-21
 // Description: Implementation of various UI functions.
 
@@ -58,6 +58,29 @@ void test1()
 	cout << "\t";
 	diplayParameters(seed, multiplier, increment, modulus);
 	cout << "\t Generated " << cycleLength << " different numbers" << endl;
+}
+
+void test2()
+{
+	cout << "Test Distribution: " << endl;
+	cout << "\t";
+	//long seed = rand();
+	//long multiplier = rand();
+	//long increment = rand();
+	//long modulus = rand();
+	long seed = 1;
+	long multiplier = 23959;
+	long increment = 12982;
+	long modulus = 6389;
+
+	auto randomGenerator = RandomGenerator(seed, multiplier, increment, modulus);
+	auto incrementalDistribution = IncrementalDistribution();
+	for (long long ll = 0; ll < 1000000; ll++)
+	{
+		incrementalDistribution.add(randomGenerator.getRandomInUnitInterval());
+	}
+	diplayParameters(seed, multiplier, increment, modulus);
+	displayDistribution(incrementalDistribution.getDistribution());
 }
 
 void testUniform()
