@@ -68,7 +68,8 @@ void test2()
 	long increment = rand();
 	long modulus = rand();
 
-	auto randomGenerator = RandomGenerator(seed, multiplier, increment, modulus);
+	//auto randomGenerator = RandomGenerator(seed, multiplier, increment, modulus);
+	auto randomGenerator = RandomGenerator(1, 23959, 12982, 6389);
 	auto incrementalDistribution = IncrementalDistribution();
 	for (long long ll = 0; ll < 1000000; ll++)
 	{

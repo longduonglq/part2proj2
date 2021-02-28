@@ -24,5 +24,6 @@ public:
 	double getRandomInUnitInterval();
 
 private:
-	long seed, multiplier, increment, modulus;
+	long multiplier, increment, modulus;
+	long long seed;
 };
