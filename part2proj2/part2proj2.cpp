@@ -65,7 +65,7 @@ void test1()
 
 void test2()
 {
-	cout << "Test Distribution: " << endl;
+	cout << "Test Uniform Distribution: " << endl;
 	cout << "\t";
 	//long seed = rand();
 	//long multiplier = rand();
@@ -122,4 +122,5 @@ int main()
 {
 	srand(time(0));
 	part2();
+	system("pause");
 }
