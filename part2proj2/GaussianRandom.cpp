@@ -1,3 +1,7 @@
+// Participant: Duyen Tran
+// Date: 02-27-21
+// Description: Generate random that follows Gaussian distribution
+
 #include "GaussianRandom.h"
 
 GaussianRandom::GaussianRandom(long seed, long multiplier, long increment, long modulus, double _median, double _sd)

@@ -1,3 +1,11 @@
+// Participants: Christopher
+// Date: 02-28-21
+// Description: Chapter 2 - Random Generator
+
+//Participants: Duyen TRan
+//Date:02/26/2021
+//Description: 2 last function.
+
 #pragma once
 #include <vector>
 

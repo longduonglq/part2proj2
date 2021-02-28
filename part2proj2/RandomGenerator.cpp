@@ -6,6 +6,7 @@
 //Date:02/26/2021
 //Description: 2 last function.
 
+
 #include <time.h>
 #include "RandomGenerator.h"
 

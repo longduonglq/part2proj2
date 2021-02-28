@@ -1,5 +1,6 @@
-// part2proj2.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Participant: Long Duong
+// Date: 02-27-21
+// Description: Implementation of various UI functions.
 
 #include <iostream>
 #include <random>
@@ -59,7 +60,7 @@ void test1()
 	cout << "\t Generated " << cycleLength << " different numbers" << endl;
 }
 
-void test2()
+void testUniform()
 {
 	cout << "Test Uniform Distribution: " << endl;
 	cout << "\t";

@@ -1,7 +1,5 @@
 #pragma once
 
-// A class that calculates the distribution incrementally instead of relying on a vector
-// contains all element
 class IncrementalDistribution
 {
 public:

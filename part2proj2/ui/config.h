@@ -1,3 +1,7 @@
+// Participant: Long Duong
+// Date: 02-27-2020
+// Description: Various UI related configurations.
+
 #pragma once
 
 namespace config

@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="GaussianRandom.h" />
     <ClInclude Include="IncrementalDistribution.h" />
+    <ClInclude Include="part2proj2.h" />
     <ClInclude Include="RandomGenerator.h" />
     <ClInclude Include="ui\AbstractColumn.h" />
     <ClInclude Include="ui\config.h" />
