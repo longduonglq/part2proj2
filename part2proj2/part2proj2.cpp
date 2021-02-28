@@ -41,14 +41,10 @@ void displayDistribution(const long frequency[10])
 
 void test1()
 {
-	//long seed = rand();
-	//long multiplier = rand();
-	//long increment = rand();
-	//long modulus = rand();
-	long seed = 1;
-	long multiplier = 40;
-	long increment = 725;
-	long modulus = 729;
+	long seed = rand();
+	long multiplier = rand();
+	long increment = rand();
+	long modulus = rand();
 
 	auto randomGenerator = RandomGenerator(seed, multiplier, increment, modulus);
 	long firstRandom = randomGenerator.getRandomInt();
@@ -67,14 +63,10 @@ void test2()
 {
 	cout << "Test Uniform Distribution: " << endl;
 	cout << "\t";
-	//long seed = rand();
-	//long multiplier = rand();
-	//long increment = rand();
-	//long modulus = rand();
-	long seed = 1;
-	long multiplier = 23959;
-	long increment = 12982;
-	long modulus = 6389;
+	long seed = rand();
+	long multiplier = rand();
+	long increment = rand();
+	long modulus = rand();
 
 	auto randomGenerator = RandomGenerator(seed, multiplier, increment, modulus);
 	auto incrementalDistribution = IncrementalDistribution();
