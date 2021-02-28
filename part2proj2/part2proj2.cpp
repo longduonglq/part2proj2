@@ -103,7 +103,7 @@ void testGaussian()
 	cout << "\tMedian = " << defaultMedian << ", Standard Deviation = " << defaultSd << endl;
 	displayDistribution(incrementalDistribution.getDistribution());
 }
-
+ 
 
 void part2()
 {
