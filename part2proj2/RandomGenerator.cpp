@@ -30,7 +30,7 @@ void RandomGenerator::setSeed(long newSeed)
 
 long RandomGenerator::getRandomInt()
 {
-	seed = (multiplier * seed + increment) % modulus;
+	setSeed((multiplier * seed + increment) % modulus);
 	return seed;
 }
 

@@ -12,19 +12,23 @@ class RandomGenerator
 public:
 	RandomGenerator() = default;
 	// Person: Christopher
-	// init class
+	//Precondition: need to pass in 4 long values
+	//Postcondition: assigns values to seed, multiplier, increment, and modulus for calculating a psuedorandom number
 	RandomGenerator(long _seed, long _multiplier, long _increment, long _modulus);
 	
 	// Person: Chrisopher
-	// assign new seed
+	//Precondition: need to pass in a long value
+	//Postcondition: assigns value to seed
 	void setSeed(long newSeed);
 
 	// Person: Christopher
-	// Get a new random Int from 0 to modulus (refer to problem 11 in textbook)
+	//Precondition: seed, multiplier, increment, and modulus must be initialized
+	//Postcondition: generates psuedorandom number using those 4 values and assigns seed this psuedorandom value
 	long getRandomInt();
 
 	// Person: DUYEN
-	// Get a random double from [0, 1). (refer to 12 in textbook pg 94)
+	//Precondition: seed, multiplier, increment, and modulus must be initialized
+	//Postcondition: Get a random double from [0, 1)
 	double getRandomInUnitInterval();
 
 private:
