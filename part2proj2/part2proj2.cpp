@@ -27,7 +27,7 @@ void displayDistribution(const long frequency[10])
 	auto frequencyColumn = make_unique<MixedColumn>(config::DEFAULT_LEFT_PADDING, config::DEFAULT_RIGHT_PADDING, L"Frequency");
 	auto graphColumn = make_unique<MixedColumn>(config::DEFAULT_LEFT_PADDING, config::DEFAULT_RIGHT_PADDING, L"Graph");
 
-	const double increment = 0.1;
+	const float increment = 0.1;
 	const long maxFrequency = *max_element(frequency, frequency + 10);
 	for (int i = 0; i < 10; i++)
 	{
