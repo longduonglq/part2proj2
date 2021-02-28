@@ -28,12 +28,12 @@ void displayDistribution(const long frequency[10])
 	auto graphColumn = make_unique<MixedColumn>(config::DEFAULT_LEFT_PADDING, config::DEFAULT_RIGHT_PADDING, L"Graph");
 
 	const float increment = 0.1;
-	const long maxFrequency = *max_element(frequency, frequency + 10);
+	const double maxFrequency = *max_element(frequency, frequency + 10);
 	for (int i = 0; i < 10; i++)
 	{
 		intervalColumn->addItems(L"[" + to_wstring(i * increment) + L" ... " + to_wstring((i + 1) * increment) + L")");
 		frequencyColumn->addItems(frequency[i]);
-		graphColumn->addItems(wstring((frequency[i] / maxFrequency) * config::MAX_LENGTH_PIXEL, L'#'));
+		graphColumn->addItems(wstring((frequency[i] / maxFrequency) * config::MAX_LENGTH_PIXEL, L'['));
 	}
 	Table({ intervalColumn.get(), frequencyColumn.get(), graphColumn.get() }, L"").dumpTableTo(wcout);
 }
@@ -41,10 +41,14 @@ void displayDistribution(const long frequency[10])
 
 void test1()
 {
-	long seed = rand();
-	long multiplier = rand();
-	long increment = rand();
-	long modulus = rand();
+	//long seed = rand();
+	//long multiplier = rand();
+	//long increment = rand();
+	//long modulus = rand();
+	long seed = 1;
+	long multiplier = 40;
+	long increment = 725;
+	long modulus = 729;
 
 	auto randomGenerator = RandomGenerator(seed, multiplier, increment, modulus);
 	long firstRandom = randomGenerator.getRandomInt();
@@ -56,20 +60,23 @@ void test1()
 	cout << "Test length cycle: " << endl;
 	cout << "\t";
 	diplayParameters(seed, multiplier, increment, modulus);
-	cout << "Generated " << cycleLength << " different numbers" << endl;
+	cout << "\t Generated " << cycleLength << " different numbers" << endl;
 }
 
 void test2()
 {
 	cout << "Test Distribution: " << endl;
 	cout << "\t";
-	long seed = rand();
-	long multiplier = rand();
-	long increment = rand();
-	long modulus = rand();
+	//long seed = rand();
+	//long multiplier = rand();
+	//long increment = rand();
+	//long modulus = rand();
+	long seed = 1;
+	long multiplier = 23959;
+	long increment = 12982;
+	long modulus = 6389;
 
-	//auto randomGenerator = RandomGenerator(seed, multiplier, increment, modulus);
-	auto randomGenerator = RandomGenerator(1, 23959, 12982, 6389);
+	auto randomGenerator = RandomGenerator(seed, multiplier, increment, modulus);
 	auto incrementalDistribution = IncrementalDistribution();
 	for (long long ll = 0; ll < 1000000; ll++)
 	{
@@ -89,7 +96,7 @@ void testGaussian()
 	long modulus = rand();
 
 	const double defaultMedian = 0.5;
-	const double defaultSd = 1;
+	const double defaultSd = 0.25;
 	auto gaussianRandom = GaussianRandom(seed, multiplier, increment, modulus, defaultMedian, defaultSd);
 	auto incrementalDistribution = IncrementalDistribution();
 	for (long long ll = 0; ll < 1000000; ll++)
@@ -97,7 +104,7 @@ void testGaussian()
 		incrementalDistribution.add(gaussianRandom.getNextInGaussianDistribution());
 	}
 	diplayParameters(seed, multiplier, increment, modulus);
-	cout << "Median = " << defaultMedian << ", Standard Deviation = " << defaultSd << endl;
+	cout << "\tMedian = " << defaultMedian << ", Standard Deviation = " << defaultSd << endl;
 	displayDistribution(incrementalDistribution.getDistribution());
 }
 
@@ -105,7 +112,9 @@ void testGaussian()
 void part2()
 {
 	test1();
+	cout << endl;
 	test2();
+	cout << endl;
 	testGaussian();
 }
 
