@@ -90,13 +90,17 @@ void testGaussian()
 {
 	cout << "Test Gaussian Distribution: " << endl;
 	cout << "\t";
-	long seed = rand();
-	long multiplier = rand();
-	long increment = rand();
-	long modulus = rand();
+	//long seed = rand();
+	//long multiplier = rand();
+	//long increment = rand();
+	//long modulus = rand();
+	long seed = 4186;
+	long multiplier = 6652;
+	long increment = 7367;
+	long modulus = 11330;
 
-	const double defaultMedian = 0.5;
-	const double defaultSd = 0.25;
+	const double defaultMedian = 0.45;
+	const double defaultSd = 0.20;
 	auto gaussianRandom = GaussianRandom(seed, multiplier, increment, modulus, defaultMedian, defaultSd);
 	auto incrementalDistribution = IncrementalDistribution();
 	for (long long ll = 0; ll < 1000000; ll++)
