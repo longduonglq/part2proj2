@@ -88,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -102,6 +103,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,13 +141,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GaussianRandom.cpp" />
     <ClCompile Include="IncrementalDistribution.cpp" />
     <ClCompile Include="part2proj2.cpp" />
     <ClCompile Include="RandomGenerator.cpp" />
+    <ClCompile Include="ui\MixedColumn.cpp" />
+    <ClCompile Include="ui\Table.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GaussianRandom.h" />
     <ClInclude Include="IncrementalDistribution.h" />
     <ClInclude Include="RandomGenerator.h" />
+    <ClInclude Include="ui\AbstractColumn.h" />
+    <ClInclude Include="ui\config.h" />
+    <ClInclude Include="ui\MixedColumn.h" />
+    <ClInclude Include="ui\Table.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
