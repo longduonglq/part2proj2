@@ -114,7 +114,4 @@ void Table::dumpTableTo(std::wostream& os) const
 
 Table::~Table()
 {
-    std::destroy(columns.begin(), columns.end());
-    for (AbstractColumn* columnPtr : columns)
-        delete columnPtr;
 }
