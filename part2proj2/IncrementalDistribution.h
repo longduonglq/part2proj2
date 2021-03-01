@@ -1,4 +1,9 @@
 #pragma once
+// Participants: Gia Minh Hoang
+// Date: 02-28-21
+
+//Participants: Long Duong
+//Date:02-28-21
 
 class IncrementalDistribution
 {
